@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import useFooter from "../../lib/useFooter";
-import FooterIndex from "./FooterIndex";
+import FooterIndex from "../Footer/FooterWidget/widgets/FooterIndex";
 import { useSearchParams } from "react-router-dom";
 import {
   calculateAxisItemCount,

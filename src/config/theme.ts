@@ -71,6 +71,13 @@ const COMPONENT_SPACING_PALETTE = {
     minPanelWidth: "22rem",
     minPanelHeight: "15rem",
   },
+  SubDomainPicker: {
+    itemVertGap: SPACING_PALETTE.s,
+    uriHorizGap: SPACING_PALETTE.s,
+    itemHeight: "1rem",
+    hoverHeight: "3rem",
+    adjacentHoverHeight: "1.4rem",
+  }
 } satisfies ComponentPalettes<SpacingPalette>;
 
 const COMPONENT_TIMING_PALETTE = {} satisfies ComponentPalettes<TimingPalette>;

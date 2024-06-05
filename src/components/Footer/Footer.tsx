@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 import useFooter from "../../lib/useFooter";
-import { useLocation } from "react-router";
-import { useEffect } from "react";
+import { SubDomainPicker } from "./FooterWidget/widgets/SubDomainPicker";
 
 // STYLES
 
@@ -28,6 +27,7 @@ const Footer = () => {
 
   return (
     <StyledFooter>
+      <SubDomainPicker />
       simulacrean.info
       {footerContent}
     </StyledFooter>

@@ -1,7 +1,10 @@
-import { useLocation } from "react-router";
-import routes from "../../config/routes";
+import { useLocation, RouteObject } from "react-router";
+import { portfolioRoutes } from "../../config/routes";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+import { findNavBarChildRoutes } from "../../lib/routerHelpers";
+
+// STYLES
 
 const StyledNav = styled.nav(
   ({ theme }) => css`
@@ -49,9 +52,10 @@ const NavBar = () => {
 
   // LOGIC
 
-  const childRoutes = routes[0].children || [];
+  const childRoutes = findNavBarChildRoutes(location.pathname);
 
-  const Links = childRoutes.map((route, index) => {
+  const Links = childRoutes.flatMap((route, index) => {
+    if (!route.handle) return [];
     const isActive =
       route.path?.replace(/\//g, "") === location.pathname.replace(/\//g, "");
 
